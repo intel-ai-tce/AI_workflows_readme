@@ -1,12 +1,72 @@
-# AI_workflows_readme
+# OverView
 
 
-Reference implementations of common solutions in the AI/ML/Data space and will help you get a head-start in building performant AI solutions quickly
+# How it Works
+
+<br><img src="images/DLSA_workflow.png" width="800" height="600"><br>
+
+# Get Started
+
+## Docker
+
+### Prerequisites 
+
+### Setup 
+
+### How to run 
 
 
-# READMEs for different AI workflow
+## Bare Metal
 
-| WorkFlow      | Folder                                             | Description
-| --------- | ------------------------------------------------ | -
-| T2&I5 | [ T2_I5_document-level-sentiment-analysis]( T2_I5_document-level-sentiment-analysist)   |DLSA is Intel optimized representative End-to-end Fine-Tuning & Inference pipeline for Document level sentiment analysis using BERT model implemented with Hugging face transformer API. .
+### Prerequisites 
+#### Download the repo
+```
+git clone https://github.com/intel/document-level-sentiment-analysis.git
+git checkout v1.0.0
+cd frameworks.ai.end2end-ai-pipelines.dlsa/profiling-transformers
+```
+#### Download the datasets
+```
+mkdir datasets
+cd datasets
+#download and extract SST-2 dataset
+wget https://dl.fbaipublicfiles.com/glue/data/SST-2.zip && unzip SST-2.zip && mv SST-2 sst
+#download and extract IMDB dataset
+wget http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz && tar -zxf aclImdb_v1.tar.gz
+```
+>Note: Make sure the network connections work well for downloading the datasets.
+### Setup 
+```
+conda create -n dlsa python=3.8 --yes
+conda activate dlsa
+sh install.sh
+```
+### How to run 
+#### Inference Pipeline
 
+| Implementations                                          | Model    | API         | Framework      | Precision      |
+| -------------------------------------------------------- | -------- | ----------- | -------------- | -------------- |
+| [Run with HF Transformers](inference/hf-transformers.md) | HF Model | Trainer     | PyTorch + IPEX | FP32,BF16      |
+| [Run with Stock Pytorch](inference/stock-pytorch.md)     | HF Mode  | Non-trainer | PyTorch        | FP32           |
+| [Run with IPEX](inference/ipex.md)                       | HF Mode  | Non-trainer | PyTorch + IPEX | FP32,BF16,INT8 |
+
+#### Fine-Tuning Pipeline
+
+
+|  Implementations                               | Model    | Instance | API         | Framework       | Precision  |
+| ---------------------------------- | -------- | -------- | ----------- | ----------------------- | ---------- |
+| [Run with HF Transformers + IPEX ](fine-tuning/single-node-trainer.md)   | HF Model | Single   | Trainer     | PyTorch + IPEX          | FP32, BF16 |
+| [Run with Stock Pytorch](fine-tuning/single-node-stock-pytorch.md) | HF Model  | Single   | Non-trainer | PyTorch                 | FP32       |
+| [Run with IPEX (Single Instance)](fine-tuning/single-node-ipex.md) | HF Model  | Single   | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
+| [Run with IPEX (Multi Instance)](fine-tuning/multi-nodes-ipex.md) | HF Model  | Multiple | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
+
+# Recommended Hardware 
+The hardware below is recommended for use with this reference implementation. For other suggestions, see Recommended Hardware.  
+# Learn More 
+
+# Known Issues 
+
+# Troubleshooting 
+
+# Support Forum 
+If you're unable to resolve your issues, contact the Support Forum. 
