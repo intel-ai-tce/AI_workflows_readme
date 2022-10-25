@@ -1,4 +1,4 @@
-# OverView
+# Overview
 The Intel Optimized reference end-to-end pipelines for Document level sentiment analysis (DLSA) using BERT model implemented using Hugging face transformer API.
  
 
