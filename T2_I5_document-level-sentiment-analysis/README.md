@@ -1,8 +1,16 @@
 # OverView
-
+The Intel Optimized reference end-to-end pipelines for Document level sentiment analysis (DLSA) using BERT model implemented using Hugging face transformer API.
+ 
 
 # How it Works
+* Uses Hugging face Tokenizer API, Intel PCL Optimization with Hugging Face for Fine-Tuning and Intel Extension for PyTorch for inference optimizations and quantization.
 
+* Classifies the sentiment of any input English paragraph as positive or negative sentiment.
+
+* Uses HF’s BERT model with Masked-Language-Modeling task pretrained using large corpus of English data, to fine tune a new BERT model with sentiment analysis task using SST-2 or IMDB dataset.
+
+* The workflow uses BF16 precision in SPR which speeds up the training time using Intel® AMX, without noticeable loss in accuracy when compared to FP32 precision using (Intel®  AVX-512).
+* 
 <br><img src="images/DLSA_workflow.png" width="800" height="600"><br>
 
 # Get Started
