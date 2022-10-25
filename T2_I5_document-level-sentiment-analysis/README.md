@@ -55,18 +55,18 @@ sh install.sh
 | Implementations                                          | Model    | API         | Framework      | Precision      |
 | -------------------------------------------------------- | -------- | ----------- | -------------- | -------------- |
 | [Run with HF Transformers](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/inference/hf-transformers.md) | HF Model | Trainer     | PyTorch + IPEX | FP32,BF16      |
-| [Run with Stock Pytorch](inference/stock-pytorch.md)     | HF Mode  | Non-trainer | PyTorch        | FP32           |
-| [Run with IPEX](inference/ipex.md)                       | HF Mode  | Non-trainer | PyTorch + IPEX | FP32,BF16,INT8 |
+| [Run with Stock Pytorch](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/inference/stock-pytorch.md)     | HF Mode  | Non-trainer | PyTorch        | FP32           |
+| [Run with IPEX]((https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/inference/ipex.md)                       | HF Mode  | Non-trainer | PyTorch + IPEX | FP32,BF16,INT8 |
 
 #### Fine-Tuning Pipeline
 
 
 |  Implementations                               | Model    | Instance | API         | Framework       | Precision  |
 | ---------------------------------- | -------- | -------- | ----------- | ----------------------- | ---------- |
-| [Run with HF Transformers + IPEX ](fine-tuning/single-node-trainer.md)   | HF Model | Single   | Trainer     | PyTorch + IPEX          | FP32, BF16 |
-| [Run with Stock Pytorch](fine-tuning/single-node-stock-pytorch.md) | HF Model  | Single   | Non-trainer | PyTorch                 | FP32       |
-| [Run with IPEX (Single Instance)](fine-tuning/single-node-ipex.md) | HF Model  | Single   | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
-| [Run with IPEX (Multi Instance)](fine-tuning/multi-nodes-ipex.md) | HF Model  | Multiple | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
+| [Run with HF Transformers + IPEX ](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/fine-tuning/single-node-trainer.md)   | HF Model | Single   | Trainer     | PyTorch + IPEX          | FP32, BF16 |
+| [Run with Stock Pytorch](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/fine-tuning/single-node-stock-pytorch.md) | HF Model  | Single   | Non-trainer | PyTorch                 | FP32       |
+| [Run with IPEX (Single Instance)](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/fine-tuning/single-node-ipex.md) | HF Model  | Single   | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
+| [Run with IPEX (Multi Instance)](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/fine-tuning/multi-nodes-ipex.md) | HF Model  | Multiple | Non-trainer | PyTorch + IPEX          | FP32,BF16  |
 
 # Recommended Hardware 
 The hardware below is recommended for use with this reference implementation. For other suggestions, see Recommended Hardware.  
