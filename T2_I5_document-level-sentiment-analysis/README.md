@@ -54,7 +54,7 @@ sh install.sh
 
 | Implementations                                          | Model    | API         | Framework      | Precision      |
 | -------------------------------------------------------- | -------- | ----------- | -------------- | -------------- |
-| [Run with HF Transformers](inference/hf-transformers.md) | HF Model | Trainer     | PyTorch + IPEX | FP32,BF16      |
+| [Run with HF Transformers]([inference/hf-transformers.md](https://github.com/intel/document-level-sentiment-analysis/blob/main/docs/inference/hf-transformers.md)) | HF Model | Trainer     | PyTorch + IPEX | FP32,BF16      |
 | [Run with Stock Pytorch](inference/stock-pytorch.md)     | HF Mode  | Non-trainer | PyTorch        | FP32           |
 | [Run with IPEX](inference/ipex.md)                       | HF Mode  | Non-trainer | PyTorch + IPEX | FP32,BF16,INT8 |
 
